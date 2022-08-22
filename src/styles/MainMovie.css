@@ -1,0 +1,586 @@
+#btn-see-more{
+    display: none;
+}
+.container{
+    display: flex;
+}
+.movie-info{
+    position: relative;
+    top: 50vh;
+}
+.liteflix-info{
+    font-family: bebas-neue, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    margin: 0px 0 30px 140px;
+    animation: transitionEase 10s;
+}
+.liteflix-info strong{
+    font-weight: 700;
+}
+
+.movie-name{
+    animation: transitionFromLeft 4s;
+    font-family: bebas-neue, sans-serif;
+    color: #64EEBC;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 100px;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+    margin: 30px 0 30px 140px;
+    width: 1500px;
+}
+
+.buttons{
+    display: flex;
+}
+.primary-button{
+    margin: 0 0 0 140px;
+    position: relative;
+    display: inline-flex;
+    padding: 1.5px 45px;
+    font-family: bebas-neue, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    background-color: #242424;
+    overflow: hidden;
+    cursor: pointer;
+    animation: transitionFromBot 5s;
+}
+.primary-button p{
+    position: relative;
+    z-index: 1;
+}
+.primary-button img{
+    padding-right: 5px;
+    position: relative;
+    z-index: 1;
+}
+.primary-button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: #5ec19d;
+    transition: width 1s, height 1s;
+    transform: translate(-50%, -50%);
+}
+.primary-button:hover::before{
+    width: 700px;
+    height: 700px;
+}
+.secondary-button{
+    position: relative;
+    display: inline-block;
+    padding: 1.5px 71px;
+    color: #ffffff91;
+    background-color: rgba(36, 36, 36, 0.5);
+    margin-left: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    animation: transitionFromBot 6s;
+}
+.secondary-button:hover{
+    border: 1px solid #FFFFFF;
+    transition: 4s;
+}
+.secondary-button:hover p{
+    color: #FFFFFF;
+    transition: 0.5s;
+
+}
+.secondary-button:hover .text-button-container svg .path-svg{
+    stroke: #FFFFFF;
+    transition: 0.5s;
+}
+.text-button-container{
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    font-family: bebas-neue, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 4px;
+}
+.text-button-container p{
+    padding-left: 5px;
+}
+.secondary-button span{
+    display: block;
+    position: absolute;
+    background-color: #FFFFFF;
+}
+.secondary-button span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+.secondary-button:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.secondary-button span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.secondary-button:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.secondary-button span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.secondary-button:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.secondary-button span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.secondary-button:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.see-options{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 100px;
+}
+.see-options p {
+    font-family: bebas-neue, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 4px;
+    color: #FFFFFF;    
+}
+.see-options p strong{
+    font-weight: 700;
+}
+.see-options img{
+    width: 15px;
+    margin: 0 140px 0 0;
+}
+.dropdown-options{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    animation: transitionFromRight 1s;
+}
+.dropdown-options label, .dropdown-options img{
+    cursor: pointer;
+    display: flex;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+}
+
+.suggestions{
+    width: 330px;
+    height: 195px;
+    position: absolute;
+    right: 98px;
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.contenedor figure{
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+.contenedor figure .back-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease-out;
+}
+.contenedor figure .img-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 22.78%, #000000 122.69%);
+    border-radius: 10px;
+    top: 0;
+}
+.contenedor figure .img-content .play-icon{
+    margin: 75px 0 0 138px;
+    width: 50px;
+    background-color: #242424;
+    opacity: 0.5;
+    border-radius: 50px;
+}
+.contenedor figure .img-content p{
+    font-family: bebas-neue, sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-left: 34px;
+    width: 80%;
+}
+
+.contenedor figure .img-content-hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(36, 36, 36, 0.7);
+    top: 0;
+    border-radius: 10px;
+    opacity: 0;
+}
+.contenedor figure .img-content-hover .play-icon-hover{
+    margin: 99px 0 0 25px;
+    width: 25px;
+    height: 25px;
+    background: #242424;
+    background-color: #242424;
+    opacity: 0.5;
+    border-radius: 25px;
+    stroke: white;
+}
+.contenedor figure .img-content-hover .play-icon-hover:hover{
+    background: #64EEBC;
+    opacity: 1;
+    transition: all 200ms ease-in;
+    stroke: black;
+}
+
+.contenedor figure .img-content-hover .star-icon-hover{
+    margin: 23.5px 0 0 25px;
+    width: 16px;
+}
+.contenedor figure .img-content-hover p{
+    font-family: bebas-neue, sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 4px;
+    width: 65%;
+}
+.contenedor figure .img-content-hover .vote-avg-hover{
+    margin: 28px 0 0 8px;
+}
+.contenedor figure .img-content-hover .title-hover{
+    margin: 105px 0 0 20px;
+}
+.contenedor figure .img-content-hover .release-date-hover{
+    margin: 28px 20px 0 180px;
+}
+.footer-hover, .content-hover{
+    display: flex;
+}
+.see-more-container{
+    position: absolute;
+    top: 233px;
+    right: 147px;
+    opacity: 0;
+    transition: all 500ms ease;
+    z-index: -1;
+}
+#btn-see-more:checked ~ .see-more-container{
+    opacity: 1;
+    z-index: 1;
+}
+
+.see-more-container img{
+    width: 350px;
+    position: relative;
+}
+.popular-check{
+    display: flex;
+}
+
+.my-movies-check{
+    display: flex;
+}
+.box-content{
+    top: 31px;
+    left: 35px;
+    position: absolute;
+}
+.see-more-container .check-icon{
+    display: none;
+    width: 15px;
+    padding-left: 15px;
+}
+.popular-check .check-icon{
+    display: block;
+}
+.see-more-container p{
+    font-family: bebas-neue, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 14px;
+    padding-left: 5px;
+    transition: all 300ms ease-in;
+    border-left: 1px solid transparent;    
+}
+.see-more-container .my-movies-text{
+    margin-right: 85px;
+}
+.see-more-container .popular-movies-text{
+    font-weight: 700;
+    margin-right: 124px;
+}
+.see-more-cont{
+    display: none;
+}
+.see-more-container p:hover{
+    border-left: 5px solid #c7c7c7;
+}
+
+.first-suggestion{
+    animation: transitionFromRight 2s;
+    transition: margin-left 5s ease;
+}
+.second-suggestion{
+    animation: transitionFromRight 3s;
+    transition: margin-left 4s ease;
+}
+.third-suggestion{
+    animation: transitionFromRight 4s;
+    transition: margin-left 3s ease;
+}
+.fourth-suggestion{
+    animation: transitionFromRight 5s;
+    transition: margin-left 2s ease;
+}
+.my-movies-list{
+    width: 330px;
+    height: 195px;
+    position: absolute;
+    right: 98px;
+    transition: all 1s ease;
+    opacity: 1;
+    display: none;
+}
+.my-movies-my-movies-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 195px;
+    margin-bottom: 25px;
+}
+.my-movies-contenedor figure{
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    width: 330px;
+    height: 195px;
+    margin-bottom: 15px;
+}
+.my-movies-contenedor figure .back-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease-out;
+}
+.my-movies-contenedor figure .img-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 22.78%, #000000 122.69%);
+    border-radius: 10px;
+    top: 0;
+}
+.my-movies-contenedor figure .img-content .play-icon{
+    margin: 75px 0 0 138px;
+    width: 50px;
+    background-color: #242424;
+    opacity: 0.5;
+    border-radius: 50px;
+}
+.my-movies-contenedor figure .img-content p{
+    font-family: bebas-neue, sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-left: 34px;
+    width: 80%;
+}
+.my-movies-contenedor figure .img-content-hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(36, 36, 36, 0.7);
+    top: 0;
+    border-radius: 10px;
+    opacity: 0;
+}
+.my-movies-contenedor figure .img-content-hover .play-icon-hover{
+    margin: 99px 0 0 25px;
+    width: 25px;
+    height: 25px;
+    background: #242424;
+    background-color: #242424;
+    opacity: 0.5;
+    border-radius: 25px;
+    stroke: white;
+}
+.my-movies-contenedor figure .img-content-hover .play-icon-hover:hover{
+    background: #64EEBC;
+    opacity: 1;
+    transition: all 200ms ease-in;
+    stroke: black;
+}
+
+.my-movies-contenedor figure .img-content-hover .star-icon-hover{
+    margin: 23.5px 0 0 25px;
+    width: 16px;
+}
+.my-movies-contenedor figure .img-content-hover p{
+    font-family: bebas-neue, sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 4px;
+    width: 65%;
+}
+.my-movies-contenedor figure .img-content-hover .vote-avg-hover{
+    margin: 28px 0 0 8px;
+}
+.my-movies-contenedor figure .img-content-hover .title-hover{
+    margin: 105px 0 0 20px;
+}
+.my-movies-contenedor figure .img-content-hover .release-date-hover{
+    margin: 28px 20px 0 180px;
+}
+.my-movies-list .first-suggestion{
+    margin-left: 800px;
+    
+}
+.my-movies-list .second-suggestion{
+    margin-left: 800px;
+}
+.my-movies-list .third-suggestion{
+    margin-left: 800px;
+}
+.my-movies-list .fourth-suggestion{
+    margin-left: 800px;
+}
+.no-movies-loaded{
+    font-family: bebas-neue, sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    width: 300px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+@keyframes transitionFromLeft {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes transitionFromBot {
+    from{
+        transform: translateY(800%);
+    }
+    to{
+        transform: translateY();
+    }
+}
+@keyframes transitionFromRight {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0);
+
+    }
+}
+@keyframes transitionEase {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }   
+}
+
+@keyframes transitionOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    
+}
+
+
+@media screen and (max-width: 1920px) {
+    .see-options{
+        margin-top: 30px
+    }
+}
